@@ -22,6 +22,26 @@ class VillageController Extends AbstractController
      */
     public function indexAction() {
         //return new \Symfony\Component\HttpFoundation\Response('Bienvenu sur Village.com');
-        return new Response('Bienvenu sur Village.com');
+        return $this->render('accueil.html.twig');
     }
+
+    /**
+     * @Route("/contact", name="contact")
+     */
+    public function contactAction() {
+        //return new \Symfony\Component\HttpFoundation\Response('Bienvenu sur Village.com');
+        return $this->render('contact.html.twig');
+    }
+
+    // public function buildForm(FormBuilder $builder, array $options)
+    // {
+    //     $builder->add('email', 'email')
+    //             ->add('subject', 'text')
+    //             ->add('content', 'textarea');
+    // }
+
+    // public function getName()
+    // {
+    //     return 'Contact';
+    // }
 }
